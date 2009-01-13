@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{%block title %}lista de perfiles{%endblock%}
+
+{%block content %}
+<h1> Lista de perfiles </h1>
+
+{% for profile in kwargs %}
+<a href= "/perfiles/{{profile.user.username}}" >{{profile.user.first_name}} {{profile.user.last_name}} </a><br/>
+{%endfor%}
+
+{%endblock%}

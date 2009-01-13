@@ -1,0 +1,8 @@
+BEGIN;
+CREATE TABLE "registration_registrationprofile" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "user_id" integer NOT NULL UNIQUE,
+    "activation_key" varchar(40) NOT NULL
+)
+;
+COMMIT;

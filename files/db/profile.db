@@ -1,0 +1,14 @@
+BEGIN;
+CREATE TABLE "profiles_userprofile" (
+    "id" integer NOT NULL PRIMARY KEY,
+    "user_id" integer NOT NULL,
+    "edad" integer unsigned NOT NULL,
+    "telefono" varchar(15) NOT NULL,
+    "pais" varchar(100) NOT NULL,
+    "gul" varchar(200) NOT NULL,
+    "website" varchar(200) NOT NULL,
+    "avatar" varchar(100) NOT NULL
+)
+;
+CREATE INDEX "profiles_userprofile_user_id" ON "profiles_userprofile" ("user_id");
+COMMIT;

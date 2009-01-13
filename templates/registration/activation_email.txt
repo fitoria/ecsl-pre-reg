@@ -1,0 +1,5 @@
+gracias por registrarse
+
+haga click en http://ecsl.sl-centroamerica.org/registro/activate/{{activation_key}} 
+
+Tiene {{expiration_days}} días para activarla.

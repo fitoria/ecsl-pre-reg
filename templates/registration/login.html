@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title%}Iniciar Sesión{% endblock %}
+
+{% block content%}
+{%if error_message %}<div class="error">{{ error_message }}</div>{%endif%}
+<h1>Iniciar Sesión.</h1>
+<form action="." method ="post" id="login-form">
+	Nombre de Usuario: {{ form.username }} <br/>
+	Contraseña: {{ form.password }} <br/>
+	<input type = "submit" value ="Iniciar Sesión" />
+</form>
+	<script type="text/javascript">
+		document.getElementById('id_username').focus()
+	</script>
+{% endblock %}
+

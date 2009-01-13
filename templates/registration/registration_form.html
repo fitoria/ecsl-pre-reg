@@ -1,0 +1,36 @@
+{% extends "base.html" %}                                                                                                        
+{% block title%}Registarse{% endblock %}
+
+{% block content%}
+{%if error_message %}<div class="error">{{ error_message }}</div>{%endif%}
+      <h1>Cree una cuenta.</h1>                                           
+      <form action="." method="post">                                     
+        {% if form.error_dict %}                                          
+          <p class="error">Favor corrija los errores.</p>                 
+        {% endif %}                                                       
+
+        {% if form.username.errors %}
+          {{ form.username.html_error_list }}
+        {% endif %}
+                Nombre de Usuario: {{ form.username }}<br/>
+
+        {% if form.email.errors %}
+          {{ form.email.html_error_list }}
+        {% endif %}
+                Correo Electrónico: {{ form.email }}<br/>
+
+                {% if form.password1.errors %}
+          {{ form.password1.html_error_list }}
+        {% endif %}
+                Contraseña: {{ form.password1 }}<br/>
+
+        {% if form.password2.errors %}
+          {{ form.password2.html_error_list }}
+        {% endif %}
+                Confirmar Contraseña: {{ form.password2 }}<br/>
+
+					<input type="submit" value="Crear" />
+				</form>
+      </label>
+
+{% endblock %}

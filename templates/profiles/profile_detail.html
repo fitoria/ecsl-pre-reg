@@ -1,0 +1,16 @@
+{%extends "base.html" %}
+{%block title%}{{profile.user.first_name}} {{profile.user.last_name}} -{%endblock%}
+{%block content%}
+<h1>{{profile.user.first_name}} {{profile.user.last_name}}</h1>
+Nombre de usuario: {{profile.user.username}} <br/>
+Email: {{profile.user.email}} <br/>
+País: {{profile.pais}} <br/>
+Edad: {{profile.edad}}<br/>
+Teléfono: {{profile.telefono}}<br/>
+Comunidad: {{profile.gul}}<br/>
+Sitio Web: <a href = {{profile.website}} />{{profile.website}}</a><br/>
+
+Foto:
+<img src = "/{{profile.avatar}}" alt = "{{profile.user.username}}" />
+
+{%endblock%}

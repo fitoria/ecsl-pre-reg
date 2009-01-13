@@ -1,0 +1,19 @@
+{%extends "base.html" %}
+{%block title%}Inicio -{%endblock%}
+
+{%block content%}
+<h1> Bienvenidos </h1><br/><br/>
+Acá encontrara información de como registrarse para el Encuentro Centroamericano de Software Libre
+a realizarse en Nicaragua en Junio del 2009.<br/>
+
+Para registrarse haga <a href ="/registro/register/">click aca</a> <br/>
+<br/><br/>
+{%if items%}
+<h1>Noticias</h1><br/><br/>
+{% for item in items %}
+<h2><a href = "{{item.link}}">{{item.title}}</a></h2><br/>
+{{item.summary|safe}}
+<br/><br/>
+{%endfor%}
+{%endif%}
+{%endblock%}
